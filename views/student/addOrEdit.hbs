@@ -1,0 +1,31 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/student" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{student._id}}">
+    <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" class="form-control" name="fullName" placeholder="Full Name" value="{{student.fullName}}">
+        <div class="text-danger">
+            {{student.fullNameError}}</div>
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="text" class="form-control" name="email" placeholder="Email" value="{{student.email}}">
+        <div class="text-danger">
+            {{student.emailError}}</div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Department</label>
+            <input type="text" class="form-control" name="department" placeholder="Department/Branch" value="{{student.department}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Year of Study</label>
+            <input type="text" class="form-control" name="year" placeholder="FE/SE/TE/BE" value="{{student.year}}">
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="add" class="btn btn-info"><i class="fa fa-database"></i> Add</button>
+        <a class="btn btn-secondary" href="/student/list"><i class="fa fa-list-alt"></i> View All</a>
+    </div>
+</form>
